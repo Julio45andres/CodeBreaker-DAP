@@ -2,8 +2,7 @@
 
 Para correr entrar a la consola de sbt y ejecutar \
 ``` $ sbt
-    sbt:CodeBreaker>
-``` 
+``` sbt:CodeBreaker> run ``` 
 o simp
 
 Julián Andrés Muñoz Montoya
