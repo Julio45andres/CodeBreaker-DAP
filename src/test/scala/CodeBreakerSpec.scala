@@ -25,7 +25,7 @@ class CodeBreakerSpec extends FunSuite with DiagrammedAssertions {
 
 	test("one coincidence pass gest_1000 should be x") {
     // arrange
-		breaker = new CodeBreaker(Array(1, 2, 3, 4))
+		breaker = new CodeBreaker(Array(1, 0, 3, 4))
 		// act
 		val result: String = breaker.gest(Array(1, 0, 0, 0))
 		// assert
