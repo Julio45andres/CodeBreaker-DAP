@@ -1,8 +1,19 @@
-ThisBuild / scalaVersion := "2.12.7"
-ThisBuild / organization := "com.example"
+name := "codebreaker"
+scalaVersion := "2.12.7"
 
-lazy val codeBreaker = (project in file("."))
-  .settings(
-    name := "CodeBreaker",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+cancelable in Global := true
+scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
+libraryDependencies ++= {
+  val akkaV       = "2.4.3"
+  val scalaTestV  = "2.2.6"
+  Seq(
+    "com.typesafe.akka" %% "akka-actor" % "2.5.16",
+    "com.typesafe.akka" %% "akka-testkit" % "2.5.16",
+    "com.typesafe.akka" %% "akka-stream" % "2.5.16",
+    "com.typesafe.akka" %% "akka-stream-testkit" % "2.5.16",
+    "com.typesafe.akka" %% "akka-http" % "10.1.4",
+    "com.typesafe.akka" %% "akka-http-testkit" % "10.1.4" % Test,
+    "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.5",
+    "org.scalatest" %% "scalatest" % "3.0.5" % Test
   )
+}
